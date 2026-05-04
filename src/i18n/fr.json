@@ -693,6 +693,7 @@
   "page.home": "ACCUEIL",
   "page.newDefault": "Nouvelle page",
   "person.battery": "Batterie",
+  "person.currentStatus": "État actuel",
   "person.phoneBattery": "Batterie téléphone",
   "person.watchBattery": "Batterie montre",
   "person.addRelatedSensor": "Ajouter un capteur lié",

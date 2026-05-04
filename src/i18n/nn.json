@@ -693,6 +693,7 @@
   "page.home": "HEIM",
   "page.newDefault": "Ny side",
   "person.battery": "Batteri",
+  "person.currentStatus": "Noverande status",
   "person.phoneBattery": "Telefonbatteri",
   "person.watchBattery": "Klokkebatteri",
   "person.addRelatedSensor": "Legg til relevant sensor",

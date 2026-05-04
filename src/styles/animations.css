@@ -71,6 +71,29 @@
   animation: pageFadeIn 0.2s ease-out forwards;
 }
 
+@keyframes statusPillIconPulse {
+  0%,
+  100% {
+    transform: translateZ(0) scale(1);
+  }
+  50% {
+    transform: translateZ(0) scale(var(--status-pill-pulse-scale, 1.04));
+  }
+}
+
+.status-pill-icon-pulse {
+  animation: statusPillIconPulse var(--status-pill-pulse-duration, 3.2s) ease-in-out infinite;
+  backface-visibility: hidden;
+  transform-origin: center;
+  will-change: transform;
+}
+
+.status-pill-icon-spin {
+  backface-visibility: hidden;
+  transform-origin: center;
+  will-change: transform;
+}
+
 /* Media playing background motion (optional + subtle) */
 @keyframes mediaBgSubtleDrift {
   0% {
@@ -123,7 +146,16 @@
   .aurora-blob-3,
   .media-bg-subtle-drift,
   .media-bg-subtle-pulse,
-  .page-transition {
+  .page-transition,
+  .status-pill-icon-pulse,
+  .status-pill-icon-spin {
+    animation: none !important;
+  }
+}
+
+@media (update: slow) {
+  .status-pill-icon-pulse,
+  .status-pill-icon-spin {
     animation: none !important;
   }
 }
