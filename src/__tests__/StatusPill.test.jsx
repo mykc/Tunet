@@ -75,6 +75,24 @@ describe('StatusPill', () => {
     expect(icon?.style.animationDuration).toBe('8s');
   });
 
+  it('applies pulse animation to the icon instead of the full pill wrapper', () => {
+    const { container } = render(
+      <StatusPill
+        pill={{ ...basePill, animationPreset: 'pulse-medium' }}
+        entity={{ ...baseEntity, state: 'on' }}
+        t={(key) => key}
+      />
+    );
+
+    const wrapper = container.firstElementChild;
+    const icon = container.querySelector('svg');
+
+    expect(wrapper?.getAttribute('class') || '').not.toContain('animate-pulse');
+    expect(icon).not.toBeNull();
+    expect(icon?.getAttribute('class') || '').toContain('status-pill-icon-pulse');
+    expect(icon?.style.getPropertyValue('--status-pill-pulse-duration')).toBe('2.2s');
+  });
+
   it('runs the selected rotation animation on conditional pills regardless of entity state', () => {
     const { container } = render(
       <StatusPill

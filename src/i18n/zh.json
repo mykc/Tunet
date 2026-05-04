@@ -594,6 +594,7 @@
   "page.home": "家",
   "page.newDefault": "新页面",
   "person.battery": "电池",
+  "person.currentStatus": "当前状态",
   "person.phoneBattery": "手机电池",
   "person.watchBattery": "手表电池",
   "person.addRelatedSensor": "添加相关传感器",

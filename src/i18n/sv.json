@@ -693,6 +693,7 @@
   "page.home": "HEM",
   "page.newDefault": "Ny sida",
   "person.battery": "Batteri",
+  "person.currentStatus": "Aktuell status",
   "person.phoneBattery": "Telefonbatteri",
   "person.watchBattery": "Klockbatteri",
   "person.addRelatedSensor": "Lägg till relevant sensor",

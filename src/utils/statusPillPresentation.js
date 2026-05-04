@@ -177,25 +177,31 @@ export function getPillAnimationConfig(pillOrPreset, { active }) {
     case 'pulse-soft':
       return {
         preset,
-        wrapperClass: 'animate-pulse',
-        wrapperStyle: { animationDuration: '3.2s' },
-        iconClass: '',
-        iconStyle: undefined,
+        wrapperClass: '',
+        wrapperStyle: undefined,
+        iconClass: 'status-pill-icon-pulse',
+        iconStyle: {
+          '--status-pill-pulse-duration': '3.2s',
+          '--status-pill-pulse-scale': '1.04',
+        },
       };
     case 'pulse-medium':
       return {
         preset,
-        wrapperClass: 'animate-pulse',
-        wrapperStyle: { animationDuration: '2.2s' },
-        iconClass: '',
-        iconStyle: undefined,
+        wrapperClass: '',
+        wrapperStyle: undefined,
+        iconClass: 'status-pill-icon-pulse',
+        iconStyle: {
+          '--status-pill-pulse-duration': '2.2s',
+          '--status-pill-pulse-scale': '1.07',
+        },
       };
     case 'rotate-slow':
       return {
         preset,
         wrapperClass: '',
         wrapperStyle: undefined,
-        iconClass: 'animate-spin',
+        iconClass: 'animate-spin status-pill-icon-spin',
         iconStyle: { animationDuration: '12s' },
       };
     case 'rotate-medium-slow':
@@ -203,7 +209,7 @@ export function getPillAnimationConfig(pillOrPreset, { active }) {
         preset,
         wrapperClass: '',
         wrapperStyle: undefined,
-        iconClass: 'animate-spin',
+        iconClass: 'animate-spin status-pill-icon-spin',
         iconStyle: { animationDuration: '8s' },
       };
     default:
