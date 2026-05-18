@@ -1,59 +1,47 @@
-﻿# Tunet Dashboard
+<div align="center">
+  <h1>Tunet Dashboard</h1>
+  <p>A modern, responsive, and highly customizable React dashboard for Home Assistant.</p>
+  
+  [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+  [![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Foyvhov%2Ftunet)
+</div>
 
-A modern React dashboard for Home Assistant with real-time entity control, energy monitoring, and multi-device profile sync.
+<br />
 
-![Main Dashboard](public/Main.png)
+<div align="center">
+  <img src="public/Main.png" alt="Main Dashboard" width="800" style="border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);"/>
+</div>
 
-## Features
+## ✨ Key Features
 
-### 🎴 Cards
+- **Rich Card Ecosystem:** Control lights, climate, media (with Android TV/Sonos support), covers, vacuums, alarms, and more.
+- **Energy & Environment:** Native Nordpool electricity prices, energy cost tracking, weather animations, and EV monitoring.
+- **Organization:** Integrated calendar, task lists, and comprehensive room/person summaries.
+- **Drag & Drop:** Fully customizable masonry grid layout with PIN-protected settings.
+- **Multi-Device Sync:** Server-side profiles allow saving and deploying layouts across multiple devices instantly.
+- **Secure by Design:** Validated backend auth with optional data-at-rest encryption for your profiles.
+- **Beautiful UI:** High-end glassmorphism design with dark/light modes and dynamic backgrounds.
+- **Multilingual:** Native support for English, German, Norwegian (NB/NN), Swedish, and Simplified Chinese.
 
-- **Universal Sensor Card**: One card to rule them all. Handles numeric sensors (with history graphs), binary sensors (doors, windows, motion), switches, input booleans, scripts, and scenes.
-- **Specialized Control Cards**:
-  - **Alarm** (BETA): Arm/disarm with mode selection, PIN-protected actions, and quick-action keypad.
-  - **Light**: Brightness, color (RGB/temp), and toggle limits.
-  - **Climate**: Thermostat modes, target temperature, and HVAC action feedback.
-  - **Media**: Generic media players + dedicated **Android TV** remote with app launching.
-    - Playlist browsing requires a **Music Assistant** `media_player`.
-    - Sonos Favorites browsing requires a **Sonos** `media_player`.
-  - **Cover**: Position sliders for blinds and toggle controls for garage doors.
-  - **Vacuum**: State monitoring, start/pause/dock commands.
-  - **Fan**: Speed percentage, oscillation, and direction controls.
-- **Energy & Environment**:
-  - **Nordpool**: Hourly electricity prices with beautiful trend graphs.
-  - **Energy Cost**: Track daily and monthly energy expenditure.
-  - **Weather**: Dynamic weather animations, current temperature, and forecasts.
-  - **Car**: EV monitoring (battery, range, charging status).
-- **Productivity & Organization**:
-  - **Calendar**: Agenda view for upcoming events.
-  - **Todo Lists**: Manage Home Assistant to-do items.
-  - **Room Card**: Compact summary of a room's state (lights, temp, occupancy).
-  - **Person**: Presence detection and location tracking.
+## 🚀 Installation
 
-### 🚀 Advanced Capabilities
+### Option 1: Home Assistant Add-on (Easiest)
 
-- **Server-side Profiles + Deploy**: Save layout configurations per user, load on any device, and publish/deploy current settings to selected devices.
-- **Validated Backend Auth**: Protected profile/settings API calls are verified against the authenticated Home Assistant user, not just browser-side state.
-- **Conflict-safe Settings Sync**: Multi-device settings updates use revision-aware sync to prevent stale tabs from overwriting newer layouts.
-- **Optional Data-at-Rest Encryption**: Encrypt server-stored profiles/settings with migration-safe compatibility modes.
-- **Persistent OAuth Session Reuse**: Browser-stored OAuth sessions can survive reloads and same-browser tab handoff while backend API calls continue to validate against Home Assistant.
-- **Dashboard Import/Export**: Portable JSON backup/restore directly from Profiles.
-- **Live Updates**: Instant state reflection via Home Assistant WebSocket.
-- **Drag-and-Drop Grid**: Fully customizable masonry layout.
-- **Settings Lock**: PIN protection prevents accidental edits.
-- **Theming**: Dark/Light modes with high-end glassmorphism and animated backgrounds.
-- **Multi-language**: Native support for English, German, Norwegian (NB/NN), Swedish, and Simplified Chinese.
+Click the button below to add the Tunet repository directly to your Home Assistant instance, then install the add-on:
 
-## Quick Start
+[![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Foyvhov%2Ftunet)
 
-### Home Assistant Add-on
+<details>
+<summary>Manual Add-on Installation</summary>
 
-1. Go to **Settings** -> **Add-ons** -> **Add-on Store** -> **Repositories** (three dots).
-2. Add `https://github.com/oyvhov/tunet`.
-3. Install **Tunet Dashboard**.
-4. Configure and Start.
+1. Go to **Settings** → **Add-ons** → **Add-on Store**.
+2. Click the three dots (top right) → **Repositories**.
+3. Add `https://github.com/oyvhov/tunet`.
+4. Find **Tunet Dashboard**, install, and start.
 
-### Docker Compose (Recommended)
+</details>
+
+### Option 2: Docker Compose
 
 ```bash
 git clone https://github.com/oyvhov/tunet.git
@@ -63,7 +51,17 @@ docker compose up -d
 
 Open `http://localhost:3002` and connect your Home Assistant instance.
 
-### Local Development
+## 📖 Documentation
+
+- [Setup & Troubleshooting](SETUP.md)
+- [Card Options & Previews](CARD_OPTIONS.md)
+- [Theme Variables](src/docs/CSS_VARIABLES.md)
+- [Roadmap](ROADMAP.md)
+
+## 🛠️ Development
+
+<details>
+<summary>Click to view local development instructions</summary>
 
 ```bash
 git clone https://github.com/oyvhov/tunet.git
@@ -71,32 +69,16 @@ cd tunet
 npm install
 npm run dev:all
 ```
-
 - Frontend: `http://localhost:5173`
 - Backend API: `http://localhost:3002/api`
 
-## Updating
+</details>
 
-See [SETUP.md](SETUP.md) for detailed setup, configuration, and troubleshooting.
-See [CARD_OPTIONS.md](CARD_OPTIONS.md) for card-by-card options and screenshots.
-See [CSS_VARIABLES.md](src/docs/CSS_VARIABLES.md) for theme token naming and usage.
+## 📄 License
 
-## Technologies
+This project is licensed under the GNU General Public License v3.0 — see the [LICENSE](LICENSE) file for details.
 
-- React 18 + Vite 7
-- Tailwind CSS 4
-- Express + SQLite (profile storage)
-- Home Assistant WebSocket API
-- Lucide Icons + MDI
-
-## 🗺️ Roadmap
-
-See our [ROADMAP.md](ROADMAP.md) for planned features and future development.
-
-## License
-
-GNU General Public License v3.0 — See [LICENSE](LICENSE)
-
-## Author
-
-[oyvhov](https://github.com/oyvhov)
+---
+<div align="center">
+  Created by <a href="https://github.com/oyvhov">oyvhov</a>
+</div>
