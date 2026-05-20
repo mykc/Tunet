@@ -5,6 +5,26 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/),
 and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## [1.20.0] — 2026-05-20
+
+### Added
+
+- Added support for native Home Assistant vacuum area cleaning. To use this, map your vacuum's native room numbers to Home Assistant Areas in the vacuum integration options (such as Roborock integration config). The dashboard will automatically detect these mappings and let you trigger cleaning for individual rooms under the "Romrein" tab.
+- Added interactive Live Map Zoom overlay with full desktop/mobile pan and zoom controls (Plus, Minus, Reset).
+- Added flexible room selection configuration allowing manual overrides for vacuum cleaning rooms using standard inputs.
+- Integrated translation variables for controls, telemetries, and status messages in Nynorsk, Bokmål, German, English, French, Swedish, and Chinese.
+
+### Changed
+
+- Redesigned the Vacuum Popup Modal with a snug, content-fitted dynamic height matching panel content.
+- Rewrote the History tab statistics grid into a clean, modern, extra-light typography style with uppercase tracking labels.
+- Consolidated maintenance indicators into a single unified layout with thin `h-1` progress bars and low-profile confirmation reset counters.
+
+### Fixed
+
+- Fixed runtime ReferenceError crashes for undefined `layoutMode`, `handleStartCleaning`, and `handleStartRoomCleaning` parameters.
+- Replaced incorrect SVG mappings to prevent render issues and crashes inside the active tabs.
+
 ## [1.19.0] — 2026-05-07
 
 ### Added
