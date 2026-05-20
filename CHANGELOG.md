@@ -5,6 +5,31 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/),
 and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## [1.20.2] — 2026-05-20
+
+### Added
+- Add release notes.
+
+### Changed
+- Add release notes.
+
+### Fixed
+- Add release notes.
+
+
+## [1.20.1] — 2026-05-20
+
+### Changed
+- Broadened vacuum map entity discovery to match both `camera.*` and `image.*` domains, and use friendly-name token matching for more reliable auto-detection.
+- Persisted vacuum map zoom and pan position per vacuum to localStorage so the view is restored when reopening the modal.
+- Cleaned map entity display names by stripping vacuum name tokens for a tidier multi-map selector.
+
+### Fixed
+- Fixed vacuum map entity matching for setups where the entity friendly name contains the vacuum name but the entity ID does not.
+- Added Norwegian `kart` keyword to fallback map entity detection.
+- Fixed ModernDropdown portal-aware click-outside handling so dropdown menus rendered through a portal no longer close unexpectedly.
+
+
 ## [1.20.0] — 2026-05-20
 
 ### Added
